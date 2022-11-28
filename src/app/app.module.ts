@@ -7,6 +7,7 @@ import { NewsPageComponent } from './components/news-page.component';
 import { MoviesPageComponent } from './components/movies-page.component';
 import { TvShowsPageComponent } from './components/tv-shows-page.component';
 import { CelebsPageComponent } from './components/celebs-page.component';
+import { NotFoundPageComponent } from './components/not-found-page.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { CelebsPageComponent } from './components/celebs-page.component';
     NewsPageComponent,
     MoviesPageComponent,
     TvShowsPageComponent,
-    CelebsPageComponent
+    CelebsPageComponent,
+    NotFoundPageComponent
   ],
   imports: [
     BrowserModule,

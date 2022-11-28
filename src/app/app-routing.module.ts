@@ -5,6 +5,7 @@ import { NewsPageComponent } from "./components/news-page.component";
 import { MoviesPageComponent } from "./components/movies-page.component";
 import { TvShowsPageComponent } from "./components/tv-shows-page.component";
 import { CelebsPageComponent } from "./components/celebs-page.component";
+import { NotFoundPageComponent } from "./components/not-found-page.component";
 
 const routes: Routes = [
   { path: "", redirectTo: "/home", pathMatch: "full" },
@@ -13,7 +14,7 @@ const routes: Routes = [
   { path: "movies", component: MoviesPageComponent },
   { path: "tv-shows", component: TvShowsPageComponent },
   { path: "celebs", component: CelebsPageComponent },
-  { path: "**", redirectTo: "/home" }
+  { path: "**", component: NotFoundPageComponent }
 ];
 
 @NgModule({
