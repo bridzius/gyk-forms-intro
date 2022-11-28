@@ -8,6 +8,7 @@ import { MoviesPageComponent } from './components/movies-page.component';
 import { TvShowsPageComponent } from './components/tv-shows-page.component';
 import { CelebsPageComponent } from './components/celebs-page.component';
 import { NotFoundPageComponent } from './components/not-found-page.component';
+import { MoviePageComponent } from './components/movie-page.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { NotFoundPageComponent } from './components/not-found-page.component';
     MoviesPageComponent,
     TvShowsPageComponent,
     CelebsPageComponent,
-    NotFoundPageComponent
+    NotFoundPageComponent,
+    MoviePageComponent
   ],
   imports: [
     BrowserModule,
