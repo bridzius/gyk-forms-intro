@@ -9,6 +9,7 @@ import { TvShowsPageComponent } from './components/tv-shows-page.component';
 import { CelebsPageComponent } from './components/celebs-page.component';
 import { NotFoundPageComponent } from './components/not-found-page.component';
 import { MoviePageComponent } from './components/movie-page.component';
+import { MovieSearchFormComponent } from './components/movie-search-form/movie-search-form.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { MoviePageComponent } from './components/movie-page.component';
     TvShowsPageComponent,
     CelebsPageComponent,
     NotFoundPageComponent,
-    MoviePageComponent
+    MoviePageComponent,
+    MovieSearchFormComponent
   ],
   imports: [
     BrowserModule,
