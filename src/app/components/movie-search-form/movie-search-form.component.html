@@ -9,6 +9,12 @@
         placeholder="Titanic"
         formControlName="title"
       />
+      <div
+        *ngIf="movieSearchForm.controls.title.errors?.['required']"
+        class="error-message"
+      >
+        Pavadinimas privalomas
+      </div>
     </div>
     <div>
       <label for="filmo-metai">Metai: </label>
