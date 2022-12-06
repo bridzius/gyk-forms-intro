@@ -10,6 +10,7 @@ import { CelebsPageComponent } from './components/celebs-page.component';
 import { NotFoundPageComponent } from './components/not-found-page.component';
 import { MoviePageComponent } from './components/movie-page.component';
 import { MovieSearchFormComponent } from './components/movie-search-form/movie-search-form.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -21,13 +22,10 @@ import { MovieSearchFormComponent } from './components/movie-search-form/movie-s
     CelebsPageComponent,
     NotFoundPageComponent,
     MoviePageComponent,
-    MovieSearchFormComponent
+    MovieSearchFormComponent,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
-  ],
+  imports: [BrowserModule, AppRoutingModule, ReactiveFormsModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
