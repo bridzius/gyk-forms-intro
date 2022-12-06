@@ -44,7 +44,11 @@ Branch: `task-4`
 ### Užduotis #5 - API kvietimas
 
 - Dokumentacija: https://developers.themoviedb.org/3/search/search-movies
+<<<<<<< HEAD
 - Kvieskite `https://api.themoviedb.org/3/search/movie` savo serviso `getMovies`metode. Naudokite turimą `api_key`.
+=======
+- Kvieskite `https://api.themoviedb.org/3/search/search-movies` savo serviso `getMovies`metode. Naudokite turimą `api_key`.
+>>>>>>> 3e87d51 (README update)
 - Grąžinkite filmų sąrašą (`response.results`).
 
 Branch: `task-5`
