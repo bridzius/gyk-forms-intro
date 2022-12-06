@@ -5,6 +5,9 @@ import {
   FormGroup,
   Validators,
 } from '@angular/forms';
+import { Observable, of } from 'rxjs';
+import { MovieSearchService } from 'src/app/services/movie-search.service';
+import { MovieListObject } from 'src/app/services/types';
 
 interface MovieSearchForm {
   title: FormControl<string | null>;
@@ -18,7 +21,12 @@ interface MovieSearchForm {
 })
 export class MovieSearchFormComponent {
   public movieSearchForm: FormGroup<MovieSearchForm>;
-  constructor(formBuilder: FormBuilder) {
+  public movies$: Observable<MovieListObject[]> = of([]);
+
+  constructor(
+    formBuilder: FormBuilder,
+    private movieSearch: MovieSearchService
+  ) {
     this.movieSearchForm = formBuilder.group({
       title: formBuilder.control('', Validators.required),
       year: formBuilder.control<number | null>(null),
@@ -26,6 +34,11 @@ export class MovieSearchFormComponent {
   }
 
   findMovie() {
-    console.log(this.movieSearchForm.value);
+    if (this.movieSearchForm.valid) {
+      this.movies$ = this.movieSearch.getMovies(
+        this.movieSearchForm.controls.title.value as string,
+        this.movieSearchForm.controls.year.value
+      );
+    }
   }
 }

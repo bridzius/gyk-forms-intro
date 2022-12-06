@@ -11,6 +11,7 @@ import { NotFoundPageComponent } from './components/not-found-page.component';
 import { MoviePageComponent } from './components/movie-page.component';
 import { MovieSearchFormComponent } from './components/movie-search-form/movie-search-form.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,12 @@ import { ReactiveFormsModule } from '@angular/forms';
     MoviePageComponent,
     MovieSearchFormComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, ReactiveFormsModule],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    ReactiveFormsModule,
+    HttpClientModule,
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })

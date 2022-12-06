@@ -29,3 +29,6 @@
   <button type="submit">Ieškoti filmo</button>
   <button type="reset">Perkrauti formą</button>
 </form>
+<ul>
+  <li *ngFor="let movie of movies$ | async">{{ movie.title }}</li>
+</ul>
