@@ -29,6 +29,20 @@
   <button type="submit">Ieškoti filmo</button>
   <button type="reset">Perkrauti formą</button>
 </form>
-<ul>
-  <li *ngFor="let movie of movies$ | async">{{ movie.title }}</li>
-</ul>
+<div
+  class="movie"
+  *ngFor="let movie of movies$ | async"
+  class="movie-container"
+>
+  <span class="movie-image">
+    <img
+      width="200"
+      height="300"
+      src="https://image.tmdb.org/t/p/w200{{ movie.poster_path }}"
+    />
+  </span>
+  <span class="movie-info">
+    <h2>{{ movie.title }}</h2>
+    <p>{{ movie.overview }}</p>
+  </span>
+</div>
