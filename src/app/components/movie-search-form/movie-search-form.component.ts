@@ -1,8 +1,13 @@
 import { Component } from '@angular/core';
-import { FormControl, FormGroup, NonNullableFormBuilder } from '@angular/forms';
+import {
+  FormBuilder,
+  FormControl,
+  FormGroup,
+  Validators,
+} from '@angular/forms';
 
 interface MovieSearchForm {
-  title: FormControl<string>;
+  title: FormControl<string | null>;
   year: FormControl<number | null>;
 }
 
@@ -13,9 +18,9 @@ interface MovieSearchForm {
 })
 export class MovieSearchFormComponent {
   public movieSearchForm: FormGroup<MovieSearchForm>;
-  constructor(formBuilder: NonNullableFormBuilder) {
+  constructor(formBuilder: FormBuilder) {
     this.movieSearchForm = formBuilder.group({
-      title: formBuilder.control(''),
+      title: formBuilder.control('', Validators.required),
       year: formBuilder.control<number | null>(null),
     });
   }
